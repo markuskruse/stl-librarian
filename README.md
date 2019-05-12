@@ -1,5 +1,7 @@
 # stl-librarian
-Generate a register with images of all stl-files in a folder
+Generate a register with images of all stl-files in a folder. One image for each model and it's name will be rendered. An html-file will be created with image tags for all images.
+
+![Register example](screenshot.png)
 
 ## Usage
 
