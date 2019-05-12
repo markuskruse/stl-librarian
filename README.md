@@ -3,6 +3,7 @@ Generate a register with images of all stl-files in a folder
 
 ## Usage
 
+1. Download the blend-file from latest release. Python script is already loaded.
 1. Open the blend-file in blender 2.8.
 1. You should see a text file at the bottom. Edit the path at the top of the file.
 1. source_dir should point to the directory where your STL-files are stored
@@ -16,6 +17,8 @@ Generate a register with images of all stl-files in a folder
 
 The blend file contains a camera and two materials. One material that mimics a matcap material is the the model rendered.
 The other material is for the text label.
+
+The python script in the repository is not really used. It is only there to see changes in it.
 
 ### For each stl-file
 
