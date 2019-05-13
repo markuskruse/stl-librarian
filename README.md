@@ -3,6 +3,10 @@ Generate a register with images of all stl-files in a folder. One image for each
 
 ![Register example](screenshot.png)
 
+## OS Support
+
+This script will work on your system if you can get Blender 2.8 to run.
+
 ## Usage
 
 1. Download the blend-file from latest release. Python script is already loaded.
@@ -14,6 +18,11 @@ Generate a register with images of all stl-files in a folder. One image for each
 1. Click run script
 1. Wait, this will take some time. Monitor the progress in the console.
 1. Inspect the result in the target dir.
+
+### Windows paths
+
+Even if you are using windows, you should use forward slashes "/". And remove the ":" after the drive letter.
+So if your files are at C:\Users\Nisse\somefolder write it as: /C/Users/Nissse/somefolder
 
 ## Function
 
