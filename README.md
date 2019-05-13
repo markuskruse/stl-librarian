@@ -43,3 +43,13 @@ Finally both the model object and label is deleted.
 
 This is very simple. Loop over all the names of the models. Create a very simple html-file and add image tags for all models.
 
+## Contribute
+
+Feature requests, issues and Contributions are very welcome. I have no set roadmap right now but I see room for lots of improvements.
+
+* Better placement of the label
+* Generate a gif from a rotating model??? Perhaps to be shown on mouse over to not induce motion sickness.
+* Analyze model normals and rotate it to expose maximum amount of detail.
+* Some kind of lighted rendering.
+* Some kind of Ambient occlusion in render.
+* Write as proper plugin in blender?
