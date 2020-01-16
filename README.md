@@ -1,11 +1,18 @@
 # stl-librarian
-Generate a register with images of all stl-files in a folder. One image for each model and it's name will be rendered. An html-file will be created with image tags for all images.
+Generate a register with images of all stl-files in a folder. Two images for each model will be rendered. One is a still, including the name of the file. The other is an animated gif showing a rotating model. An html-file will be created with image tags for all images.
+When hovering over an image, it will show the animated gif, otherwise the still.
 
 ![Register example](screenshot.png)
 
 ## OS Support
 
 This script will work on your system if you can get Blender 2.8 to run.
+
+### Install PIL/Pillow
+
+PIL/Pillow is used to save the animated gif. Install it using pip if it is not installed:
+
+/path/to/blenders/python -m pip install pillow
 
 ## Usage
 
@@ -18,6 +25,17 @@ This script will work on your system if you can get Blender 2.8 to run.
 1. Click run script
 1. Wait, this will take some time. Monitor the progress in the console.
 1. Inspect the result in the target dir.
+
+### Non-mandatory properties
+
+You can alter the size of the rendered images using width and height.
+
+For the animation, there are three properties to change. 
+ * anim_frames determine how many frames will be rendered. A whole turn will be generated (unless the number of frames are very low). More frames will make the animation play more smoothly but will also take up more space and take longer to render.
+ * anim_seconds determine how long the animation will be. A delay for each frame will be calculated based on this value.
+ * anim_scale determines how big the animation will be, in percent of the still image. A value of 50% will save a lot of space (and some render time).
+ 
+The default value will give gif images of about 1 Mb.
 
 ### Windows paths
 
@@ -45,6 +63,8 @@ The camera gets a bit narrower FOV and is set to focus on the two selected objec
 The scene is rendered to an image with the name of the model loaded.
 
 Name of model is saved to a list.
+
+A series of frames is rendered where the camera rotates around the model. Pillow is used to save the gif.
 
 Finally both the model object and label is deleted.
 
