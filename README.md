@@ -3,6 +3,10 @@ Generate a register with images of all stl-files in a folder. One image for each
 
 ![Register example](screenshot.png)
 
+## OS Support
+
+This script will work on your system if you can get Blender 2.8 to run.
+
 ## Usage
 
 1. Download the blend-file from latest release. Python script is already loaded.
@@ -14,6 +18,11 @@ Generate a register with images of all stl-files in a folder. One image for each
 1. Click run script
 1. Wait, this will take some time. Monitor the progress in the console.
 1. Inspect the result in the target dir.
+
+### Windows paths
+
+Even if you are using windows, you should use forward slashes "/". And remove the ":" after the drive letter.
+So if your files are at C:\Users\Nisse\somefolder write it as: /C/Users/Nissse/somefolder
 
 ## Function
 
@@ -43,3 +52,13 @@ Finally both the model object and label is deleted.
 
 This is very simple. Loop over all the names of the models. Create a very simple html-file and add image tags for all models.
 
+## Contribute
+
+Feature requests, issues and Contributions are very welcome. I have no set roadmap right now but I see room for lots of improvements.
+
+* Better placement of the label
+* Generate a gif from a rotating model??? Perhaps to be shown on mouse over to not induce motion sickness.
+* Analyze model normals and rotate it to expose maximum amount of detail.
+* Some kind of lighted rendering.
+* Some kind of Ambient occlusion in render.
+* Write as proper plugin in blender?
